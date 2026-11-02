@@ -75,9 +75,9 @@ window.addEventListener('resize', () => goToSlide(currentSlide, true));
 const focusSelect = document.getElementById('focusSelect');
 const focusDescription = document.getElementById('focusDescription');
 const focusViews = {
-  general: {order:['gps','ict','assets','odoo','aruti'], text:'Business understanding, enterprise delivery and user enablement.'},
-  innovation: {order:['ict','gps','assets','odoo','aruti'], text:'Service continuity, user training, digital health systems, asset accountability and practical digital innovation.'},
-  'ai-adoption': {order:['gps','odoo','assets','aruti','ict'], text:'Requirements, stakeholder engagement, process mapping, UAT, data quality, AI-assisted prototyping and user adoption.'}
+  general: {order:['gps','ict','assets','odoo','aruti','mentors'], text:'Business understanding, enterprise delivery and user enablement.'},
+  innovation: {order:['ict','gps','assets','odoo','aruti','mentors'], text:'Service continuity, user training, digital health systems, asset accountability and practical digital innovation.'},
+  'ai-adoption': {order:['gps','odoo','assets','aruti','ict','mentors'], text:'Requirements, stakeholder engagement, process mapping, UAT, data quality, AI-assisted prototyping and user adoption.'}
 };
 function applyFocus(value, updateUrl = true) {
   const focus = Object.hasOwn(focusViews,value) ? value : 'general';
