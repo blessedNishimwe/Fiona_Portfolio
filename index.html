@@ -19,6 +19,28 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
+<style>
+.services-section{scroll-margin-top:100px}
+.service-navigation{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+.service-navigation button{border:1px solid var(--stroke);border-radius:30px;background:transparent;color:var(--ink);padding:10px 17px;cursor:pointer;font-size:12px;transition:background .25s,color .25s}
+.service-navigation button[aria-pressed="true"]{background:var(--ink);color:white;border-color:var(--ink)}
+.service-controls{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+#serviceCount{font-size:12px;letter-spacing:.15em;color:var(--muted)}
+.service-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--accent) transparent;padding-bottom:18px}
+.service-card{flex:0 0 94%;min-width:0;scroll-snap-align:start;display:grid;grid-template-columns:1.1fr 1fr;border:1px solid var(--stroke);background:white;border-radius:8px;overflow:hidden}
+.service-intro{padding:clamp(28px,4vw,58px)}
+.service-intro h3{font-size:clamp(30px,3.3vw,46px);line-height:1.15;letter-spacing:-.035em;margin:30px 0 22px;font-weight:600}
+.service-intro p{color:var(--muted);font-size:15px;line-height:1.85;margin-bottom:30px}
+.service-scope{padding:clamp(28px,4vw,58px);background:var(--paper);border-left:1px solid var(--stroke)}
+.service-scope ul{list-style:none;padding:0;margin:28px 0}
+.service-scope li{padding:17px 0;border-bottom:1px solid var(--stroke);font-size:15px}
+.service-value{font-size:14px;color:var(--muted);line-height:1.8}
+.service-value strong{color:var(--accent);font-weight:650}
+.service-hint{font-size:12px;color:var(--muted);margin-top:16px}
+@media(max-width:700px){.service-card{flex-basis:96%;grid-template-columns:1fr}.service-scope{border-left:0;border-top:1px solid var(--stroke)}.service-navigation{flex-wrap:nowrap;overflow:auto;padding-bottom:12px}.service-navigation button{white-space:nowrap}.service-intro h3{margin-top:22px}}
+html:not(.js) .service-track{display:grid;overflow:visible}
+html:not(.js) .service-navigation,html:not(.js) .service-controls{display:none}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -33,7 +55,7 @@
       <nav class="desktop-nav" aria-label="Main navigation">
         <a href="#expertise">Expertise</a>
         <a href="#work">Selected work</a>
-        <a href="#experience">Experience</a>
+        <a href="#services">Services</a>
         <a href="#approach">Approach</a>
       </nav>
       <a class="nav-contact" href="mailto:fionaalphonce8@gmail.com">Let's connect <span aria-hidden="true">↗</span></a>
@@ -42,7 +64,7 @@
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" inert>
       <a href="#expertise">Expertise</a>
       <a href="#work">Selected work</a>
-      <a href="#experience">Experience</a>
+      <a href="#services">Services</a>
       <a href="#approach">Approach</a>
       <a href="#contact">Connect</a>
     </nav>
@@ -345,77 +367,12 @@
 <div class="carousel-trackline" aria-hidden="true"><span id="carouselProgress"></span>
 </div>
 </div>
-</section>    <section class="section shell" id="experience" aria-labelledby="experience-title">
-      <div class="section-heading reveal">
-<div>
-<div class="eyebrow"><span class="eyebrow-line"></span> 04 / EXPERIENCE</div>
-<h2 id="experience-title">Across systems,<br><em>teams and industries.</em></h2>
-</div>
-<p>A progression from enterprise implementation and requirements analysis to operational ICT services and practical digital innovation.</p>
-</div>
-      <div class="experience-list">
-        <article class="experience-item reveal">
-<div class="experience-date">MAY 2025 — SEP 2026</div>
-<div class="experience-body">
-<div class="role-line">
-<h3>IT Associate</h3><span>01</span>
-</div>
-<p class="employer">Deloitte Consulting · Afya Yangu Southern Project</p>
-<p>Supported CTC2, CTC Analytics and GFTS for facility teams across two regions; diagnosed system and database issues; guided data clerks; and maintained asset verification and ICT support documentation.</p>
-<div class="role-tags"><span>ICT service delivery</span><span>Enterprise systems</span><span>Capacity building</span><span>Asset management</span>
-</div>
-</div>
-</article>
-        <article class="experience-item reveal">
-<div class="experience-date">2023</div>
-<div class="experience-body">
-<div class="role-line">
-<h3>IT Sales Assistant</h3><span>02</span>
-</div>
-<p class="employer">Banny Company T. Ltd</p>
-<p>Prepared ICT tender documentation and technical specifications, handled sales invoices and hardware records, and assisted with customer requirements documentation.</p>
-<div class="role-tags"><span>ICT procurement support</span><span>Technical specifications</span><span>Stakeholder needs</span>
-</div>
-</div>
-</article>
-        <article class="experience-item reveal">
-<div class="experience-date">2022</div>
-<div class="experience-body">
-<div class="role-line">
-<h3>Data Analyst, Locum</h3><span>03</span>
-</div>
-<p class="employer">Marie Stopes Tanzania</p>
-<p>Cleaned and prepared procurement and finance asset datasets in Excel to support migration into the asset management system.</p>
-<div class="role-tags"><span>Data quality</span><span>Migration preparation</span>
-</div>
-</div>
-</article>
-        <article class="experience-item reveal">
-<div class="experience-date">2020</div>
-<div class="experience-body">
-<div class="role-line">
-<h3>Business Analyst</h3><span>04</span>
-</div>
-<p class="employer">ICTPACK Solutions Ltd</p>
-<p>Gathered business requirements, mapped client processes, supported Odoo ERP configuration and Tanzania Bureau of Standards Moodle implementation, supported data migration and user training, and developed project and system documentation.</p>
-<div class="role-tags"><span>Business analysis</span><span>Odoo ERP</span><span>Documentation</span><span>User acceptance support</span>
-</div>
-</div>
-</article>
-        <article class="experience-item reveal">
-<div class="experience-date">AUG — OCT 2018</div>
-<div class="experience-body">
-<div class="role-line">
-<h3>Business Analyst Intern</h3><span>05</span>
-</div>
-<p class="employer">NPK Technologies Ltd · Aruti HR & Payroll</p>
-<p>Mapped HR and payroll workflows to Aruti modules, supported installation and configuration, prepared legacy data in Excel and assisted users with migration and system adoption.</p>
-<div class="role-tags"><span>ERP implementation</span><span>Process mapping</span><span>Data migration</span>
-</div>
-</div>
-</article>
-      </div>
-    </section>
+</section>    <section class="section shell services-section" id="services" aria-labelledby="services-title">
+<div class="section-heading"><div><div class="eyebrow">04 / SERVICES</div><h2 id="services-title">Your business challenge.<br><em>A practical way forward.</em></h2></div><p>Technology, data and digital communication services shaped around what your organisation needs to improve.</p></div>
+<div class="service-navigation" aria-label="Choose a service"><button type="button" data-service="0" aria-controls="serviceTrack">IT Consulting</button><button type="button" data-service="1" aria-controls="serviceTrack">Website Design &amp; Development</button><button type="button" data-service="2" aria-controls="serviceTrack">Data Analysis &amp; Reporting</button><button type="button" data-service="3" aria-controls="serviceTrack">Business Analysis &amp; Digital Solutions</button><button type="button" data-service="4" aria-controls="serviceTrack">Content Creation</button><button type="button" data-service="5" aria-controls="serviceTrack">Digital Marketing</button></div>
+<div class="service-controls"><span id="serviceCount" role="status">01 / 06</span><div><button class="arrow-button" id="servicePrev" type="button" aria-label="Previous service">←</button> <button class="arrow-button" id="serviceNext" type="button" aria-label="Next service">→</button></div></div>
+<div class="service-track" id="serviceTrack" role="region" aria-roledescription="carousel" aria-label="Services; swipe or use arrow keys to browse" tabindex="0"><article class="service-card" aria-labelledby="service-title-0"><div class="service-intro"><span class="eyebrow">01 / IT Consulting</span><h3 id="service-title-0">Technology that supports your team.</h3><p>Unreliable systems and recurring IT issues interrupt daily operations. I help you identify the gaps and choose practical improvements.</p><a class="button button-solid" href="#contact">Discuss your project ↗</a></div><div class="service-scope"><span class="eyebrow">HOW I CAN HELP</span><ul><li>IT needs assessments and technology recommendations</li><li>Application support, troubleshooting and system configuration</li><li>IT asset tracking, documentation and user training</li></ul><p class="service-value"><strong>Business value</strong><br>More reliable operations and confident users.</p></div></article><article class="service-card" aria-labelledby="service-title-1"><div class="service-intro"><span class="eyebrow">02 / Website Design &amp; Development</span><h3 id="service-title-1">Make your business easier to find and understand.</h3><p>An outdated or unclear website can make it difficult for customers to understand your offer. I build websites around your business goals and your visitors’ needs.</p><a class="button button-solid" href="#contact">Discuss your project ↗</a></div><div class="service-scope"><span class="eyebrow">HOW I CAN HELP</span><ul><li>Responsive business websites, portfolios and landing pages</li><li>Clear navigation, service content and enquiry forms</li><li>Website updates, maintenance and relevant integrations</li></ul><p class="service-value"><strong>Business value</strong><br>A professional online presence with a clear path to enquiry.</p></div></article><article class="service-card" aria-labelledby="service-title-2"><div class="service-intro"><span class="eyebrow">03 / Data Analysis &amp; Reporting</span><h3 id="service-title-2">Turn scattered data into useful decisions.</h3><p>Inconsistent spreadsheets and manual reporting make performance difficult to assess. I clean, organise and analyse your data to answer the questions that matter.</p><a class="button button-solid" href="#contact">Discuss your project ↗</a></div><div class="service-scope"><span class="eyebrow">HOW I CAN HELP</span><ul><li>Data cleaning, validation and consolidation</li><li>Excel reports and interactive Power BI dashboards</li><li>Trend analysis and streamlined reporting workflows</li></ul><p class="service-value"><strong>Business value</strong><br>Dependable reporting and clearer management visibility.</p></div></article><article class="service-card" aria-labelledby="service-title-3"><div class="service-intro"><span class="eyebrow">04 / Business Analysis &amp; Digital Solutions</span><h3 id="service-title-3">Build systems around how your business works.</h3><p>Manual processes and disconnected applications create delays and duplicate work. I map your workflows and define the right solution, from ERP configuration to customised development.</p><a class="button button-solid" href="#contact">Discuss your project ↗</a></div><div class="service-scope"><span class="eyebrow">HOW I CAN HELP</span><ul><li>Requirements gathering, process mapping and ERP consulting</li><li>ERP selection, installation, configuration and customisation</li><li>Custom applications, integrations, migration support, UAT and training</li></ul><p class="service-value"><strong>Business value</strong><br>Connected workflows and solutions aligned with business needs.</p></div></article><article class="service-card" aria-labelledby="service-title-4"><div class="service-intro"><span class="eyebrow">05 / Content Creation</span><h3 id="service-title-4">Communicate your value clearly.</h3><p>When your message is unclear or content is inconsistent, customers struggle to see how you can help. I create content that explains your offer in language your audience understands.</p><a class="button button-solid" href="#contact">Discuss your project ↗</a></div><div class="service-scope"><span class="eyebrow">HOW I CAN HELP</span><ul><li>Website copy, service descriptions and business profiles</li><li>Social media captions, graphics and content calendars</li><li>Short video scripts, storyboards and accessible user guides</li></ul><p class="service-value"><strong>Business value</strong><br>Clear messaging and a consistent brand voice.</p></div></article><article class="service-card" aria-labelledby="service-title-5"><div class="service-intro"><span class="eyebrow">06 / Digital Marketing</span><h3 id="service-title-5">Give your online activity a clear direction.</h3><p>Posting without a defined audience or purpose makes results difficult to understand. I help you connect your digital presence to customer needs and business goals.</p><a class="button button-solid" href="#contact">Discuss your project ↗</a></div><div class="service-scope"><span class="eyebrow">HOW I CAN HELP</span><ul><li>Audience definition, key messages and content planning</li><li>Social media and promotional campaign planning</li><li>Engagement, website traffic and enquiry reporting</li></ul><p class="service-value"><strong>Business value</strong><br>Focused marketing and evidence to guide your next steps.</p></div></article></div>
+<p class="service-hint">Explore all six services using the arrows, service names or a swipe.</p></section>
 
 <section class="section shell" id="expertise" aria-labelledby="expertise-title">
 <div class="section-heading">
@@ -470,4 +427,7 @@
 </section>
 </main><footer class="site-footer">
 <div class="shell footer-inner"><span>© <span id="copyrightYear">2026</span> Fiona Hanura</span><span>Business · Technology · People</span><a href="#top">Back to top ↑</a>
-</div></footer></body></html>
+</div></footer><script>
+(()=>{const track=document.getElementById('serviceTrack'),cards=[...track.children],tabs=[...document.querySelectorAll('[data-service]')],prev=document.getElementById('servicePrev'),next=document.getElementById('serviceNext'),count=document.getElementById('serviceCount');let active=0,frame;const left=c=>c.getBoundingClientRect().left-track.getBoundingClientRect().left+track.scrollLeft;function update(i){active=i;count.textContent=String(i+1).padStart(2,'0')+' / 06';prev.disabled=i===0;next.disabled=i===cards.length-1;tabs.forEach((t,n)=>t.setAttribute('aria-pressed',String(n===i)))}function go(i){i=Math.max(0,Math.min(cards.length-1,i));track.scrollTo({left:left(cards[i]),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});update(i)}tabs.forEach((t,i)=>t.addEventListener('click',()=>go(i)));prev.addEventListener('click',()=>go(active-1));next.addEventListener('click',()=>go(active+1));track.addEventListener('keydown',e=>{if(e.target!==track)return;const keys={ArrowLeft:active-1,ArrowRight:active+1,Home:0,End:cards.length-1};if(e.key in keys){e.preventDefault();go(keys[e.key])}});track.addEventListener('scroll',()=>{cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>update(cards.reduce((n,c,i)=>Math.abs(left(c)-track.scrollLeft)<Math.abs(left(cards[n])-track.scrollLeft)?i:n,0)))},{passive:true});track.addEventListener('focusin',e=>{const card=e.target.closest('.service-card');if(card)go(cards.indexOf(card))});window.addEventListener('resize',()=>track.scrollTo({left:left(cards[active]),behavior:'instant'}));update(0);if(location.hash==='#experience')document.getElementById('services').scrollIntoView()})();
+</script>
+</body></html>
